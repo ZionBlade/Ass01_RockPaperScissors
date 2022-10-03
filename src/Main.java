@@ -82,8 +82,17 @@ public class Main
             if (in.hasNextLine())
             {
                 playAgain = in.nextLine();
-                if(in.hasNextLine()){
-                    
+                if(playAgain.equalsIgnoreCase("y"))
+                {
+                    playing = true;
+                }
+                else if (playAgain.equalsIgnoreCase("n"))
+                {
+                    playing = false;
+                }
+                else
+                {
+                    System.out.println("invalid Response, try again");
                 }
 
             }
@@ -92,7 +101,7 @@ public class Main
                 System.out.print("\nThat is not a valid move");
             }
 
-        } while (false);
+        } while (playing);
     }
 }
 
